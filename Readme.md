@@ -16,7 +16,7 @@ The API of this library is inspired by the [XMLHttpRequest-2 FormData Interface]
 ## Install
 
 ```
-npm install --save form-data
+npm install --save @stguten/form-data
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ In this example we are constructing a form with 3 fields that contain a string,
 a buffer and a file stream.
 
 ``` javascript
-var FormData = require('form-data');
+var FormData = require('@stguten/form-data');
 var fs = require('fs');
 
 var form = new FormData();
@@ -37,7 +37,7 @@ form.append('my_file', fs.createReadStream('/foo/bar.jpg'));
 Also you can use http-response stream:
 
 ``` javascript
-var FormData = require('form-data');
+var FormData = require('@stguten/form-data');
 var http = require('http');
 
 var form = new FormData();
@@ -52,7 +52,7 @@ http.request('http://nodejs.org/images/logo.png', function(response) {
 Or @mikeal's [request](https://github.com/request/request) stream:
 
 ``` javascript
-var FormData = require('form-data');
+var FormData = require('@stguten/form-data');
 var request = require('request');
 
 var form = new FormData();
@@ -79,7 +79,7 @@ For more advanced request manipulations ```submit()``` method returns ```http.Cl
 You can provide custom options, such as `maxDataSize`:
 
 ``` javascript
-var FormData = require('form-data');
+var FormData = require('@stguten/form-data');
 
 var form = new FormData({ maxDataSize: 20971520 });
 form.append('my_field', 'my value');
